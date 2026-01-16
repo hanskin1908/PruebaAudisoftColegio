@@ -1,0 +1,30 @@
+@model Presentacion.Modelos.Solicitudes.NotaCrearSolicitud
+@{
+    ViewData["Title"] = "Crear nota";
+}
+
+<h1>Crear nota</h1>
+
+<form asp-action="Crear" method="post">
+    @Html.AntiForgeryToken()
+    <div class="mb-3">
+        <label asp-for="valor" class="form-label"></label>
+        <input asp-for="valor" class="form-control" type="number" step="0.01" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="idProfesor" class="form-label"></label>
+        <select asp-for="idProfesor" class="form-select" asp-items="ViewBag.Profesores"></select>
+        <span asp-validation-for="idProfesor" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="idEstudiante" class="form-label"></label>
+        <select asp-for="idEstudiante" class="form-select" asp-items="ViewBag.Estudiantes"></select>
+        <span asp-validation-for="idEstudiante" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a class="btn btn-secondary" asp-action="Listado">Volver</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

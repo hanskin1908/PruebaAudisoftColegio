@@ -1,0 +1,21 @@
+@model Presentacion.Modelos.Solicitudes.EstudianteActualizarSolicitud
+@{
+    ViewData["Title"] = "Editar estudiante";
+}
+
+<h1>Editar estudiante</h1>
+
+<form asp-action="Editar" asp-route-id="@ViewBag.Id" method="post">
+    @Html.AntiForgeryToken()
+    <div class="mb-3">
+        <label asp-for="nombre" class="form-label"></label>
+        <input asp-for="nombre" class="form-control" />
+        <span asp-validation-for="nombre" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a class="btn btn-secondary" asp-action="Listado">Volver</a>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

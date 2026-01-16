@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Gestion academica</h1>
+    <p class="lead">Seleccione un modulo para administrar estudiantes, profesores y notas.</p>
+    <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+        <a class="btn btn-primary" asp-controller="Estudiantes" asp-action="Listado">Estudiantes</a>
+        <a class="btn btn-secondary" asp-controller="Profesores" asp-action="Listado">Profesores</a>
+        <a class="btn btn-success" asp-controller="Notas" asp-action="Listado">Notas</a>
+    </div>
+</div>

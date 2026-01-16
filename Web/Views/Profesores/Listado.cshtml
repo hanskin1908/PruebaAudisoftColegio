@@ -1,0 +1,69 @@
+@model Presentacion.Modelos.ListadoPaginadoVista<Presentacion.Modelos.Respuestas.ProfesorRespuesta>
+@{
+    ViewData["Title"] = "Profesores";
+    var paginaActual = Model.lista.paginaActual;
+    var totalPaginas = Model.lista.totalPaginas == 0 ? 1 : Model.lista.totalPaginas;
+    var tamanoPagina = Model.tamanoPagina == 0 ? 10 : Model.tamanoPagina;
+}
+
+<h1>Profesores</h1>
+
+@if (TempData["MensajeExito"] != null)
+{
+    <div class="alert alert-success">@TempData["MensajeExito"]</div>
+}
+@if (TempData["MensajeError"] != null)
+{
+    <div class="alert alert-danger">@TempData["MensajeError"]</div>
+}
+@if (!string.IsNullOrWhiteSpace(Model.mensajeError))
+{
+    <div class="alert alert-danger">@Model.mensajeError</div>
+}
+
+<p>
+    <a class="btn btn-primary" asp-action="Crear">Crear profesor</a>
+</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var profesor in Model.lista.datos)
+    {
+        <tr>
+            <td>@profesor.id</td>
+            <td>@profesor.nombre</td>
+            <td class="text-end">
+                <a class="btn btn-sm btn-outline-secondary" asp-action="Editar" asp-route-id="@profesor.id">Editar</a>
+                <form asp-action="Eliminar" asp-route-id="@profesor.id" method="post" class="d-inline">
+                    @Html.AntiForgeryToken()
+                    <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Desea eliminar este profesor?');">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<nav>
+    <ul class="pagination">
+        <li class="page-item @(paginaActual <= 1 ? "disabled" : "")">
+            <a class="page-link" asp-action="Listado" asp-route-numeroPagina="@(paginaActual - 1)" asp-route-tamanoPagina="@tamanoPagina">Anterior</a>
+        </li>
+        @for (var i = 1; i <= totalPaginas; i++)
+        {
+            <li class="page-item @(i == paginaActual ? "active" : "")">
+                <a class="page-link" asp-action="Listado" asp-route-numeroPagina="@i" asp-route-tamanoPagina="@tamanoPagina">@i</a>
+            </li>
+        }
+        <li class="page-item @(paginaActual >= totalPaginas ? "disabled" : "")">
+            <a class="page-link" asp-action="Listado" asp-route-numeroPagina="@(paginaActual + 1)" asp-route-tamanoPagina="@tamanoPagina">Siguiente</a>
+        </li>
+    </ul>
+</nav>

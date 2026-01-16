@@ -1,0 +1,23 @@
+@model Presentacion.Modelos.ModeloError
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">Ocurrio un error al procesar la solicitud.</h2>
+
+@if (Model.MostrarIdSolicitud)
+{
+    <p>
+        <strong>Id de solicitud:</strong> <code>@Model.idSolicitud</code>
+    </p>
+}
+
+<h3>Modo de desarrollo</h3>
+<p>
+    Al cambiar al entorno <strong>Development</strong> se mostrara mas informacion sobre el error.
+</p>
+<p>
+    <strong>No habilite Development en produccion.</strong>
+    Puede exponer informacion sensible de excepciones.
+</p>
