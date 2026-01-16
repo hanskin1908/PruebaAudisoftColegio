@@ -28,11 +28,11 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>Id</th>
+            <th>ID</th>
             <th>Nombre</th>
             <th>Valor</th>
-            <th>Id profesor</th>
-            <th>Id estudiante</th>
+            <th>ID Profesor</th>
+            <th>ID Estudiante</th>
             <th></th>
         </tr>
     </thead>
@@ -49,7 +49,7 @@
                 <a class="btn btn-sm btn-outline-secondary" asp-action="Editar" asp-route-id="@nota.id">Editar</a>
                 <form asp-action="Eliminar" asp-route-id="@nota.id" method="post" class="d-inline">
                     @Html.AntiForgeryToken()
-                    <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('Desea eliminar esta nota?');">Eliminar</button>
+                    <button type="submit" class="btn btn-sm btn-outline-danger" onclick="return confirm('¿Desea eliminar esta nota?');">Eliminar</button>
                 </form>
             </td>
         </tr>
