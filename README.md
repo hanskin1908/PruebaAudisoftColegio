@@ -115,15 +115,27 @@ Dominio no depende de ninguna capa externa. Aplicacion depende solo de Dominio. 
 <img width="1918" height="382" alt="image" src="https://github.com/user-attachments/assets/8ae90ce6-c6cb-4ceb-b34b-a0c094e32de8" />
 
 
-[AQUI CAPTURA - Listado de estudiantes con paginacion]
+ Listado de estudiantes con paginacion
+<img width="1913" height="853" alt="image" src="https://github.com/user-attachments/assets/4369b1cf-ba3e-4692-b5cf-6d98c0c28471" />
+<img width="975" height="273" alt="image" src="https://github.com/user-attachments/assets/214e1482-e96a-45d9-a95f-e27694125586" />
 
-[AQUI CAPTURA - Formulario de creacion de estudiante]
 
-[AQUI CAPTURA - Validacion al eliminar estudiante con notas]
+ Formulario de creacion de estudiante
+<img width="975" height="204" alt="image" src="https://github.com/user-attachments/assets/e80d8ff1-e7c2-4323-9605-e0d6baca72d4" />
 
-[AQUI CAPTURA - Listado de profesores]
+<img width="975" height="329" alt="image" src="https://github.com/user-attachments/assets/b90947d2-07bd-452e-9186-3c3ad0bb89e7" />
 
-[AQUI CAPTURA - Listado de notas]
+Validacion al eliminar estudiante con notas
+<img width="975" height="373" alt="image" src="https://github.com/user-attachments/assets/0cf3efaa-540f-44c8-80d7-af784e3fe041" />
+
+
+ Listado de profesores
+<img width="975" height="301" alt="image" src="https://github.com/user-attachments/assets/681aa2e8-6e97-40f3-80b7-2e1b56386b44" />
+
+
+ Listado de notas
+<img width="975" height="270" alt="image" src="https://github.com/user-attachments/assets/baa64db8-b122-4c3e-918a-8481096076c4" />
+
 
 ## Consideraciones tecnicas
 
