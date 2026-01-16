@@ -112,7 +112,8 @@ Dominio no depende de ninguna capa externa. Aplicacion depende solo de Dominio. 
 
 ## Capturas de la aplicacion
 
-[AQUI CAPTURA - Pantalla principal / menu]
+<img width="1918" height="382" alt="image" src="https://github.com/user-attachments/assets/8ae90ce6-c6cb-4ceb-b34b-a0c094e32de8" />
+
 
 [AQUI CAPTURA - Listado de estudiantes con paginacion]
 
